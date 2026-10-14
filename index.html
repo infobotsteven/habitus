@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Habitus – planery i dzienniki nawyków | Małe kroki. Mocne nawyki.</title>
+  <meta name="description" content="Habitus tworzy cyfrowe i drukowane planery, dzienniki oraz workbooki, które pomagają budować dobre nawyki – w oparciu o wiedzę psychologiczną, bez presji.">
+  <meta property="og:title" content="Habitus – Małe kroki. Mocne nawyki.">
+  <meta property="og:description" content="Planery, dzienniki i workbooki do budowania nawyków. Habitus Daily, Move i Read.">
+  <meta property="og:image" content="media/poster.jpg">
+  <meta name="theme-color" content="#F6EFE6">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<a class="skip" href="#main">Przejdź do treści</a>
+
+<header class="site-header" id="top">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Habitus – strona główna">
+      <img src="img/symbol.svg" alt="" width="40" height="40">
+      <span class="brand-name">Habitus</span>
+    </a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav" aria-label="Otwórz menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="nav" class="nav" aria-label="Główna nawigacja">
+      <a href="#produkty">Produkty</a>
+      <a href="#jak-to-dziala">Jak to działa</a>
+      <a href="#o-marce">O marce</a>
+      <a href="#prezentacja">Film</a>
+      <a class="btn btn-small" href="#tracker">Darmowy tracker</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Planery · Dzienniki · Workbooki</p>
+        <h1>Małe kroki.<br><span class="underlined">Mocne nawyki.</span></h1>
+        <p class="lead">Planery, dzienniki i workbooki, które pomagają budować dobre nawyki – oparte na wiedzy psychologicznej, zaprojektowane z myślą o codziennym życiu.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#produkty">Zobacz produkty</a>
+          <a class="btn btn-ghost" href="#tracker">Pobierz darmowy tracker</a>
+        </div>
+        <p class="hero-note">PDF do druku od 19 zł · plik od razu po zakupie</p>
+      </div>
+
+      <div class="hero-visual" aria-label="Przykładowa strona trackera nawyku">
+        <div class="page-card">
+          <div class="page-head">
+            <div>
+              <p class="page-label">Mój nawyk</p>
+              <p class="page-title">10 minut czytania dziennie</p>
+            </div>
+            <p class="page-count"><span id="doneCount">12</span>/30</p>
+          </div>
+          <div class="tracker" id="heroTracker" role="group" aria-label="Tracker 30 dni – kliknij dzień, aby go odhaczyć"></div>
+          <p class="page-foot">Kliknij kółko, żeby odhaczyć dzień. <span class="dot-today"></span> dziś</p>
+        </div>
+        <div class="sticker">kolejny ✓</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHERE -->
+  <div class="where">
+    <div class="wrap where-inner">
+      <span>Kupisz nas na</span>
+      <ul>
+        <li>Etsy</li><li>habitusplanner.com</li><li>Allegro</li><li>Amazon <small>(wersje drukowane)</small></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- PRESENTATION VIDEO -->
+  <section class="section present" id="prezentacja">
+    <div class="wrap">
+      <div class="present-head">
+        <p class="eyebrow">Poznaj Habitus</p>
+        <h2>Habitus w minutę</h2>
+        <p class="section-lead">Zobacz, jak działają nasze planery, jakie mamy linie produktów i od czego najlepiej zacząć.</p>
+      </div>
+      <div class="present-frame">
+        <video id="presentVideo" preload="none" poster="media/prezentacja_poster.jpg" playsinline>
+          <source src="media/habitus_prezentacja.mp4" type="video/mp4">
+          Twoja przeglądarka nie obsługuje odtwarzania wideo.
+        </video>
+        <button class="play" type="button" aria-label="Odtwórz film o Habitus">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M24 18 L48 32 L24 46 Z"/></svg>
+          <span>Odtwórz · 1 min</span>
+        </button>
+      </div>
+      <p class="present-note">Prezenter w filmie został wygenerowany przez AI (HeyGen).</p>
+    </div>
+  </section>
+
+  <!-- VALUES -->
+  <section class="section" id="wartosci">
+    <div class="wrap">
+      <p class="eyebrow">W co wierzymy</p>
+      <h2>Zmiana nie musi być wielka,<br>żeby była prawdziwa</h2>
+      <p class="section-lead">Naszą misją jest sprawić, by praca nad sobą była przyjemna, uporządkowana i realistyczna – bez presji, za to z widocznym postępem.</p>
+      <div class="values">
+        <article class="value">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 40 L26 28 L36 34 L50 18"/></svg>
+          <h3>Małe kroki</h3>
+          <p>Jeden nawyk naraz. Zmiana, którą da się utrzymać, jest lepsza od rewolucji na tydzień.</p>
+        </article>
+        <article class="value">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 44 L18 20 C26 16 32 18 32 22 C32 18 38 16 46 20 L46 44 C38 40 32 42 32 46 C32 42 26 40 18 44Z"/></svg>
+          <h3>Wiedza, nie moda</h3>
+          <p>Każdy produkt opiera się na tym, co psychologia wie o motywacji i nawykach.</p>
+        </article>
+        <article class="value">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 46 C18 36 14 28 18 22 C22 16 30 18 32 24 C34 18 42 16 46 22 C50 28 46 36 32 46Z"/></svg>
+          <h3>Ciepło bez presji</h3>
+          <p>Nie oceniamy i nie straszymy. Gorszy dzień to część drogi, nie porażka.</p>
+        </article>
+        <article class="value">
+          <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M18 32 L28 42 L46 22"/></svg>
+          <h3>Postęp, który widać</h3>
+          <p>Odhaczone dni składają się w obraz zmiany – i to on motywuje najbardziej.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="section section-sand" id="produkty">
+    <div class="wrap">
+      <p class="eyebrow">Produkty</p>
+      <h2>Trzy linie, jeden cel: kolejny ✓</h2>
+      <div class="lines">
+
+        <article class="line" style="--c:#8FA98B">
+          <header>
+            <h3>Habitus Daily</h3>
+            <p>nawyki i codzienność</p>
+          </header>
+          <ul class="products">
+            <li><div class="cover"><span>90 dni nowych nawyków</span></div><div><strong>90 dni nowych nawyków</strong><small>planer z trackerem i ćwiczeniami</small></div></li>
+            <li><div class="cover"><span>Tydzień bez presji</span></div><div><strong>Tydzień bez presji</strong><small>planer tygodniowy z refleksją</small></div></li>
+            <li><div class="cover"><span>Jeden nawyk</span></div><div><strong>Jeden nawyk</strong><small>workbook krok po kroku</small></div></li>
+          </ul>
+        </article>
+
+        <article class="line" style="--c:#C9785B">
+          <header>
+            <h3>Habitus Move</h3>
+            <p>sport amatorski</p>
+          </header>
+          <ul class="products">
+            <li><div class="cover"><span>Od 5 do 10 km</span></div><div><strong>Od 5 do 10 km</strong><small>dziennik biegacza na 12 tygodni</small></div></li>
+            <li><div class="cover"><span>Plan i regeneracja</span></div><div><strong>Plan i regeneracja</strong><small>tracker treningu, snu i samopoczucia</small></div></li>
+            <li><div class="cover"><span>Głowa w formie</span></div><div><strong>Głowa w formie</strong><small>workbook motywacji sportowej</small></div></li>
+          </ul>
+        </article>
+
+        <article class="line" style="--c:#4A3B32">
+          <header>
+            <h3>Habitus Read</h3>
+            <p>czytanie i rozwój</p>
+          </header>
+          <ul class="products">
+            <li><div class="cover"><span>52 książki w rok</span></div><div><strong>52 książki w rok</strong><small>wyzwanie czytelnicze z trackerem</small></div></li>
+            <li><div class="cover"><span>Dziennik czytelnika</span></div><div><strong>Dziennik czytelnika</strong><small>notatki, oceny i cytaty</small></div></li>
+            <li><div class="cover"><span>Czytam i działam</span></div><div><strong>Czytam i działam</strong><small>workbook: z książki do nawyku</small></div></li>
+          </ul>
+        </article>
+
+      </div>
+      <div class="formats">
+        <ul class="tags">
+          <li>PDF do druku</li><li>Szablony cyfrowe (Notion, tablet)</li><li>Wersje drukowane – Amazon KDP</li>
+        </ul>
+        <p class="price">PDF od <strong>19 zł</strong> · pakiety do <strong>79 zł</strong> · druk <strong>59 zł</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" id="jak-to-dziala">
+    <div class="wrap">
+      <p class="eyebrow">Jak to działa</p>
+      <h2>Od pierwszej strony do pierwszego ✓</h2>
+      <ol class="steps">
+        <li><span class="num">1</span><h3>Wybierz obszar</h3><p>Nawyki, sport albo czytanie – zacznij od tego, co dziś jest dla Ciebie najważniejsze.</p></li>
+        <li><span class="num">2</span><h3>Pobierz lub zamów</h3><p>PDF dostajesz od razu po zakupie, wersję drukowaną wysyła Amazon.</p></li>
+        <li><span class="num">3</span><h3>Jeden nawyk naraz</h3><p>Krótkie ćwiczenia i prosty plan na start, bez listy dwudziestu postanowień.</p></li>
+        <li><span class="num today">4</span><h3>Odhaczaj dni</h3><p>Tracker pokazuje postęp. Każdy dzień to kolejny ✓ – i powód, żeby jutro zrobić następny.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- STORY -->
+  <section class="section section-deep" id="o-marce">
+    <div class="wrap story">
+      <div>
+        <p class="eyebrow eyebrow-light">Nasza historia</p>
+        <h2>Skąd wziął się Habitus?</h2>
+        <p>Habitus założył psycholog z wykształcenia, który na co dzień pracuje z ludźmi. Każdego dnia widział to samo: ambitne postanowienia, które po dwóch tygodniach znikały – nie z braku chęci, ale z braku prostego systemu.</p>
+        <p>Zamiast kolejnej aplikacji z powiadomieniami postanowił stworzyć coś spokojniejszego: <strong>papierowe i cyfrowe narzędzia</strong>, które łączą to, co psychologia wie o nawykach, z przyjemnością odhaczania kolejnych dni.</p>
+      </div>
+      <figure class="definition">
+        <img src="img/symbol-light.svg" alt="" width="96" height="96">
+        <blockquote>
+          <p class="word">habitus</p>
+          <p class="pos">łac. · rzeczownik</p>
+          <p class="meaning">stan, nawyk, usposobienie – to, kim się stajemy przez to, co robimy codziennie.</p>
+        </blockquote>
+      </figure>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="section" id="film">
+    <div class="wrap video-wrap">
+      <div class="video-copy">
+        <p class="eyebrow">Habitus w 30 sekund</p>
+        <h2>Zobacz, jak wygląda zmiana krok po kroku</h2>
+        <p>Krótki film o tym, czym jest Habitus i dlaczego zaczynamy od jednego nawyku.</p>
+      </div>
+      <div class="video-frame">
+        <video controls preload="metadata" poster="media/poster.jpg" playsinline>
+          <source src="media/habitus_30s.mp4" type="video/mp4">
+          Twoja przeglądarka nie obsługuje odtwarzania wideo.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section-sand" id="faq">
+    <div class="wrap faq-wrap">
+      <div>
+        <p class="eyebrow">Pytania</p>
+        <h2>Zanim zaczniesz</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Jak otrzymam plik PDF?</summary>
+          <p>Link do pobrania pojawia się od razu po zakupie i trafia na Twój adres e-mail. Plik możesz pobierać wielokrotnie.</p>
+        </details>
+        <details>
+          <summary>Czy wydrukuję planer w domu?</summary>
+          <p>Tak. Planery są przygotowane do druku na zwykłej domowej drukarce. Możesz też wypełniać je na tablecie w aplikacji do notatek.</p>
+        </details>
+        <details>
+          <summary>Mam za sobą wiele nieudanych postanowień. Czy to dla mnie?</summary>
+          <p>Właśnie dla Ciebie. Habitus nie zakłada perfekcji – zaczynasz od jednego nawyku, a gorszy dzień jest wpisany w plan.</p>
+        </details>
+        <details>
+          <summary>Czy są wersje drukowane?</summary>
+          <p>Tak, wybrane planery i dzienniki są dostępne jako książki drukowane na Amazonie (wysyłka bezpośrednio od Amazonu).</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD MAGNET -->
+  <section class="section cta" id="tracker">
+    <div class="wrap cta-inner">
+      <div class="cta-copy">
+        <h2>Zacznij od jednego nawyku.<br><span class="underlined">Reszta przyjdzie.</span></h2>
+        <p>Pobierz za darmo <strong>tracker 30 dni</strong> w PDF – jedna strona, jeden nawyk, trzydzieści kółek do odhaczenia. Na drugiej stronie znajdziesz krótką instrukcję i miejsce na cotygodniowe podsumowanie.</p>
+        <ul class="perks">
+          <li>2 strony A4 do druku w domu</li>
+          <li>Bez zakładania konta i podawania e-maila</li>
+        </ul>
+        <a class="btn btn-download" href="media/habitus_tracker_30_dni.pdf" download>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14"/></svg>
+          Pobierz tracker (PDF)
+        </a>
+      </div>
+      <a class="tracker-preview" href="media/habitus_tracker_30_dni.pdf" download aria-label="Pobierz tracker 30 dni (PDF)">
+        <img src="img/tracker_podglad.jpg" alt="Podgląd pierwszej strony trackera 30 dni Habitus" width="760" height="1075" loading="lazy">
+        <span class="badge">Za darmo</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a class="brand brand-light" href="#top"><img src="img/symbol.svg" alt="" width="36" height="36"><span class="brand-name">Habitus</span></a>
+      <p class="footer-tag">Małe kroki. Mocne nawyki.</p>
+    </div>
+    <nav aria-label="Stopka">
+      <a href="#produkty">Produkty</a>
+      <a href="#jak-to-dziala">Jak to działa</a>
+      <a href="#o-marce">O marce</a>
+      <a href="#faq">Pytania</a>
+    </nav>
+    <div class="footer-contact">
+      <p>habitusplanner.com</p>
+      <p>Instagram: @habitus.planners</p>
+    </div>
+  </div>
+  <div class="wrap footer-note">
+    <p>Strona koncepcyjna przygotowana w ramach projektu semestralnego. Teksty, grafiki i film powstały z pomocą narzędzi AI.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
