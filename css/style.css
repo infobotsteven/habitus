@@ -284,3 +284,30 @@ strong { font-weight: 600; }
 .present-frame.playing .play { display: none; }
 .present-note { text-align: center; font-size: 13px; color: var(--taupe); margin-top: 16px; }
 @media (max-width: 560px) { .present-frame { border-radius: 16px; } .present-frame .play svg { width: 72px; height: 72px; padding: 16px 13px 16px 19px; } }
+
+/* prezentacja marki – przeglądarka slajdów */
+.deck-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; margin-bottom: 36px; }
+.deck-head .section-lead { margin-bottom: 0; }
+.deck-viewer { position: relative; border-radius: 22px; overflow: hidden; overflow: clip; background: var(--sand); box-shadow: 0 2px 4px rgba(74,59,50,.08), 0 30px 70px -30px rgba(74,59,50,.5); aspect-ratio: 16 / 9; outline-offset: 6px; touch-action: pan-y; }
+.deck-track { display: flex; height: 100%; transition: transform .5s cubic-bezier(.3,.7,.2,1); }
+.deck-slide { flex: 0 0 100%; margin: 0; height: 100%; }
+.deck-slide img { width: 100%; height: 100%; object-fit: cover; user-select: none; -webkit-user-drag: none; }
+.deck-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 52px; height: 52px; border-radius: 50%; border: 0; background: rgba(255,252,247,.92); box-shadow: 0 8px 20px -8px rgba(40,30,25,.5); cursor: pointer; display: grid; place-items: center; transition: transform .15s, opacity .2s; }
+.deck-nav:hover { transform: translateY(-50%) scale(1.07); }
+.deck-nav:disabled { opacity: 0; pointer-events: none; }
+.deck-nav svg { width: 22px; height: 22px; fill: none; stroke: var(--brown); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.deck-nav.prev { left: 18px; } .deck-nav.next { right: 18px; }
+.deck-count { position: absolute; right: 18px; bottom: 16px; margin: 0; background: rgba(74,59,50,.78); color: var(--cream); font-size: 13px; padding: 4px 12px; border-radius: 999px; }
+.deck-tabs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 18px; }
+.deck-tab { display: flex; align-items: center; gap: 10px; background: transparent; border: 1.5px solid rgba(74,59,50,.18); border-radius: 14px; padding: 10px 14px; font: inherit; font-size: 14px; color: var(--taupe); cursor: pointer; text-align: left; transition: background .2s, border-color .2s, color .2s; }
+.deck-tab span { display: grid; place-items: center; flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--sand); font-family: var(--serif); font-weight: 600; font-size: 14px; color: var(--brown); }
+.deck-tab:hover { border-color: rgba(74,59,50,.4); color: var(--brown); }
+.deck-tab.active { background: var(--paper); border-color: var(--sage); color: var(--brown); font-weight: 500; }
+.deck-tab.active span { background: var(--sage); color: var(--paper); }
+@media (max-width: 860px) {
+  .deck-tabs { grid-template-columns: repeat(5, auto); overflow-x: auto; padding-bottom: 6px; }
+  .deck-tab { white-space: nowrap; }
+  .deck-nav { width: 40px; height: 40px; } .deck-nav.prev { left: 10px; } .deck-nav.next { right: 10px; }
+}
+@media (max-width: 560px) { .deck-viewer { border-radius: 14px; } .deck-head .btn-download { width: 100%; justify-content: center; } }
+@media (prefers-reduced-motion: reduce) { .deck-track { transition: none; } }

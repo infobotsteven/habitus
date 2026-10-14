@@ -85,6 +85,39 @@
     });
   }
 
+  // --- prezentacja marki: przeglądarka slajdów
+  var viewer = document.querySelector('.deck-viewer');
+  if (viewer) {
+    var track = viewer.querySelector('.deck-track');
+    var slides = viewer.querySelectorAll('.deck-slide');
+    var tabs = document.querySelectorAll('.deck-tab');
+    var prev = viewer.querySelector('.prev'), next = viewer.querySelector('.next');
+    var now = document.getElementById('deckNow'), cur = 0;
+    function go(i) {
+      cur = Math.max(0, Math.min(slides.length - 1, i));
+      track.style.transform = 'translateX(' + (-100 * cur) + '%)';
+      tabs.forEach(function (t, k) { t.classList.toggle('active', k === cur); t.setAttribute('aria-current', k === cur ? 'true' : 'false'); });
+      slides.forEach(function (s, k) { s.setAttribute('aria-hidden', k === cur ? 'false' : 'true'); });
+      prev.disabled = cur === 0; next.disabled = cur === slides.length - 1;
+      now.textContent = cur + 1;
+    }
+    prev.addEventListener('click', function () { go(cur - 1); });
+    next.addEventListener('click', function () { go(cur + 1); });
+    tabs.forEach(function (t) { t.addEventListener('click', function () { go(+t.dataset.i); }); });
+    viewer.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight') { go(cur + 1); e.preventDefault(); }
+      if (e.key === 'ArrowLeft') { go(cur - 1); e.preventDefault(); }
+    });
+    var x0 = null;
+    viewer.addEventListener('pointerdown', function (e) { x0 = e.clientX; });
+    viewer.addEventListener('pointerup', function (e) {
+      if (x0 === null) return; var dx = e.clientX - x0; x0 = null;
+      if (Math.abs(dx) > 40) go(cur + (dx < 0 ? 1 : -1));
+    });
+    viewer.addEventListener('scroll', function () { viewer.scrollLeft = 0; viewer.scrollTop = 0; });
+    go(0);
+  }
+
   // --- delikatne pojawianie się sekcji
   var els = document.querySelectorAll('.section .wrap > *, .line, .value, .steps li');
   if ('IntersectionObserver' in window) {
